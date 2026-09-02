@@ -64,8 +64,45 @@
       backdrop-filter: blur(22px) saturate(145%);
       box-shadow: 0 10px 35px rgba(58, 35, 21, .08);
     }
-    .brand { font-weight: 750; letter-spacing: -.02em; white-space: nowrap; }
-    .brand small { color: var(--muted); font-weight: 500; margin-left: 6px; }
+    .site-nav { display: flex; align-items: center; gap: 6px; flex: 0 0 auto; }
+    .home-link, .trip-switcher summary {
+      min-height: 38px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      color: #4f3b30;
+      font-size: .84rem;
+      font-weight: 720;
+      line-height: 1;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .home-link:hover, .trip-switcher summary:hover { background: rgba(156, 89, 46, .09); }
+    .trip-switcher { position: relative; }
+    .trip-switcher summary { cursor: pointer; list-style: none; }
+    .trip-switcher summary::-webkit-details-marker { display: none; }
+    .trip-switcher summary::after { content: "⌄"; color: var(--muted); font-size: .78rem; transition: transform .2s ease; }
+    .trip-switcher[open] summary::after { transform: rotate(180deg); }
+    .trip-menu {
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 0;
+      width: 278px;
+      padding: 8px;
+      border: 1px solid rgba(86, 53, 34, .14);
+      border-radius: 18px;
+      background: rgba(255, 253, 248, .98);
+      box-shadow: 0 18px 50px rgba(58, 35, 21, .18);
+    }
+    .trip-menu a { display: block; padding: 11px 12px; border-radius: 12px; text-decoration: none; }
+    .trip-menu a:hover { background: rgba(156, 89, 46, .08); }
+    .trip-menu a[aria-current="page"] { background: rgba(85, 114, 100, .1); }
+    .trip-menu strong, .trip-menu small { display: block; }
+    .trip-menu strong { font-size: .88rem; }
+    .trip-menu small { margin-top: 2px; color: var(--muted); font-size: .72rem; }
+    .trip-menu .all-trips { margin-top: 5px; border-top: 1px solid var(--line); border-radius: 0 0 12px 12px; color: var(--desert-deep); font-size: .8rem; font-weight: 700; }
     .nav { display: flex; gap: 4px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
     .nav::-webkit-scrollbar { display: none; }
     .nav a {
@@ -136,7 +173,7 @@
     .card { border: 1px solid rgba(255,255,255,.78); background: var(--card); box-shadow: var(--shadow); border-radius: var(--radius-lg); }
 
     .route-card { padding: 26px; }
-    .route-line { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin: 14px 0 26px; }
+    .route-line { position: relative; display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; margin: 14px 0 26px; }
     .route-line::before { content: ""; position: absolute; height: 2px; left: 8%; right: 8%; top: 16px; background: linear-gradient(90deg, var(--sage), var(--sun), var(--desert-deep)); }
     .route-stop { position: relative; z-index: 1; text-align: center; }
     .route-stop i { display: block; width: 34px; height: 34px; margin: 0 auto 8px; border-radius: 50%; border: 7px solid #fffaf1; background: var(--desert); box-shadow: 0 0 0 1px rgba(86,53,34,.12); }
@@ -218,7 +255,6 @@
     footer { padding: 10px 0 50px; text-align: center; color: var(--muted); font-size: .78rem; }
 
     @media (max-width: 850px) {
-      .brand small { display: none; }
       .hero-stats { grid-template-columns: repeat(2, 1fr); }
       .segments, .grid-3 { grid-template-columns: repeat(2, 1fr); }
       .day-body { grid-template-columns: 1fr; }
@@ -229,11 +265,13 @@
     }
     @media (max-width: 600px) {
       .shell { width: min(calc(100% - 22px), var(--content)); }
-      .topbar { top: 8px; justify-content: flex-start; padding: 8px; overflow: hidden; }
-      .brand { display: none; }
+      .topbar { top: 8px; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 3px; padding: 7px; border-radius: 22px; }
+      .site-nav { justify-content: space-between; }
+      .home-link, .trip-switcher summary { min-height: 34px; padding: 6px 9px; font-size: .78rem; }
+      .trip-menu { left: auto; right: 0; width: min(278px, calc(100vw - 40px)); }
       .nav { width: 100%; }
       .nav a { padding: 7px 10px; font-size: .78rem; }
-      .hero { min-height: 590px; padding-top: 122px; border-radius: 0 0 30px 30px; }
+      .hero { min-height: 620px; padding-top: 168px; border-radius: 0 0 30px 30px; }
       h1 { font-size: clamp(2.35rem, 13vw, 3.7rem); line-height: 1.02; }
       .hero-lead { line-height: 1.75; }
       .hero-stat { padding: 13px; }
@@ -310,7 +348,16 @@
 <body>
   <a class="skip-link" href="#main">跳到行程正文</a>
   <header class="topbar" aria-label="页面导航">
-    <div class="brand">宁夏三代计划 <small>2026 国庆版</small></div>
+    <div class="site-nav">
+      <a class="home-link" href="../../" aria-label="返回布布一家的旅行主页">← 旅行主页</a>
+      <details class="trip-switcher">
+        <summary>切换旅行计划</summary>
+        <div class="trip-menu">
+          <a href="./" aria-current="page"><strong>宁夏 · 沙漠与星空</strong><small>2026.09.30—10.07 · 当前页面</small></a>
+          <a class="all-trips" href="../../#all-trips">查看全部旅行计划 →</a>
+        </div>
+      </details>
+    </div>
     <nav class="nav">
       <a href="#prepare">行前准备</a><a href="#route">路线</a><a href="#days">每日安排</a><a href="#hotels">酒店活动</a><a href="#food">餐食</a>
     </nav>
@@ -337,18 +384,19 @@
         <p class="section-note">机票和酒店已经订好，红色标签表示尚未购买的车票。</p>
       </div>
       <div class="card route-card">
-        <div class="route-line" aria-label="路线：深圳、上饶或婺源出发，经南昌、银川、中卫，再返回南昌">
+        <div class="route-line" aria-label="路线：深圳、上饶或婺源出发，经南昌、银川、中卫，10 月 6 日返回南昌，10 月 7 日从南昌回深圳">
           <div class="route-stop"><i></i><strong>各地出发</strong><span>9.30 主计划 · 10.1 备选</span></div>
           <div class="route-stop"><i></i><strong>南昌集合</strong><span>9.30—10.2</span></div>
           <div class="route-stop"><i></i><strong>中卫古城</strong><span>10.2—10.3</span></div>
           <div class="route-stop"><i></i><strong>沙坡头</strong><span>10.3—10.5</span></div>
-          <div class="route-stop"><i></i><strong>银川返程</strong><span>10.5—10.7</span></div>
+          <div class="route-stop"><i></i><strong>银川</strong><span>10.5—10.6</span></div>
+          <div class="route-stop"><i></i><strong>南昌 → 深圳</strong><span>10.6—10.7</span></div>
         </div>
         <div class="segments">
           <div class="segment"><b>南昌集合</b><p>各自到南昌，下午休息、整理行李。</p></div>
           <div class="segment"><b>中卫古城</b><p>逛鼓楼、高庙和向阳街，晚上早点睡。</p></div>
           <div class="segment"><b>沙坡头</b><p>玩沙、骑骆驼、看日落，连住两家特色酒店。</p></div>
-          <div class="segment"><b>银川返程</b><p>览山公园看日落，第二天坐动车去机场。</p></div>
+          <div class="segment"><b>南昌转程</b><p>10 月 6 日从银川飞回南昌，10 月 7 日再从南昌乘高铁回深圳。</p></div>
         </div>
         <div class="fineprint"><strong>住宿与用车：</strong>每晚两间房，夫妻和孩子一间，外公外婆一间。市内接送叫 7 座车，行李放不下就分两辆。孩子每天午休 40–60 分钟。</div>
       </div>
@@ -447,7 +495,7 @@
         </article>
 
         <article class="card day">
-          <div class="day-head"><div class="day-no"><small>Day</small><strong>6–7</strong></div><div class="day-title"><h3>10 月 6—7 日｜回家</h3><p>银川 → 河东机场 → 南昌 → 上饶 / 婺源 / 深圳</p></div><div class="weather-pill">不再安排景点</div></div>
+          <div class="day-head"><div class="day-no"><small>Day</small><strong>6–7</strong></div><div class="day-title"><h3>10 月 6—7 日｜回家</h3><p>10 月 6 日银川 → 南昌；10 月 7 日南昌 → 深圳</p></div><div class="weather-pill">不再安排景点</div></div>
           <div class="day-body">
             <div class="timeline">
               <div class="event"><div class="time">10.6 07:30–10:10</div><div><h4>早餐、服药、取回洗衣和整理行李</h4><p>检查衣袋、鞋内和行李轮上的沙，出发前再称一次行李。</p></div></div>
