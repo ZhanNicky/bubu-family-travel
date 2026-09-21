@@ -152,7 +152,10 @@ html.motion-paused .postcard :is(.cloud,.star,.scene-train,.sun-rays){animation-
 .ticket-options{font-size:12px;margin-top:16px;color:var(--muted)}
 .ticket-options summary{cursor:pointer;color:var(--green);font-weight:700;min-height:36px}
 .ticket-options ul{padding-left:20px}.ticket-options li{margin:6px 0}
+.weather-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-bottom:16px}.weather-grid .info-card{min-width:0}.weather-history{padding:24px;margin-bottom:16px}.weather-history-head{display:flex;justify-content:space-between;align-items:start;gap:24px}.weather-history-head p{max-width:650px;color:var(--muted);font-size:13px}.weather-summary{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}.weather-summary span{padding:4px 10px;border-radius:99px;background:#e5eef4;color:#31596f;font-size:11px}.weather-years{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:18px}.weather-year{padding:12px;border:1px solid #d8e3e9;border-radius:13px;background:#f3f7f9}.weather-year b,.weather-year span{display:block}.weather-year b{font-size:13px}.weather-year span{color:var(--muted);font-size:11px;line-height:1.65}.weather-source{margin-top:13px;color:var(--muted);font-size:11px}.weather-source a{text-underline-offset:3px}.check-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.check-group{padding:18px;border:1px solid #dbe4e8;border-radius:18px;background:#f5f8f9b8}.check-group h4{display:flex;align-items:center;gap:9px;margin-bottom:5px}.check-group h4 span{display:grid;place-items:center;width:28px;height:28px;border-radius:9px;background:#dfeaf0;color:var(--blue);font-size:12px}.check-group .check-list{display:block}.check-group .check-item:last-child{border-bottom:0}.check-group-note{margin-bottom:6px;color:var(--muted);font-size:11px}.check-group.sand{background:#faf4e8;border-color:#eadbc0}.check-group.sand h4 span{background:#f1dfb8;color:#7d5a28}.check-group.rain{background:#eef5f8;border-color:#d2e1e8}
 @media(max-width:600px){.mobile-dock{grid-template-columns:repeat(5,minmax(0,1fr))}.ticket-notes{display:grid;gap:4px}.ticket-scroll{border-radius:18px}.ticket-table th,.ticket-table td{padding:12px 10px}}
+@media(max-width:900px){.weather-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.weather-years{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.weather-grid,.check-groups{grid-template-columns:1fr}.weather-history{padding:19px}.weather-history-head{display:block}.weather-years{grid-template-columns:repeat(2,minmax(0,1fr))}.check-group{padding:15px}.check-group .check-item{padding:9px 0}}
 </style></head>
 <body id="page-top"><a class="skip-link" href="#main">跳到行程正文</a><header class="topbar"><div class="shell"><div class="top-inner"><a class="brand" href="../../index.html"><span class="brand-mark" aria-hidden="true">✳</span><span>布布一家<small>OUR LITTLE ADVENTURES</small></span></a><div class="site-nav"><a class="home-link" href="../../index.html">← 旅行主页</a><details class="trip-switcher"><summary>旅行档案 ↗</summary><nav class="trip-menu" aria-label="旅行档案"><a href="./index.html" aria-current="page"><b>宁夏 · 沙漠与星空</b><small>2026.10.01—10.07</small></a><a href="../../index.html#all-trips">全部旅行计划 →</a></nav></details></div></div><nav class="nav" aria-label="本页导航"><a href="#prepare">行前准备</a><a href="#tickets">交通总表</a><a href="#route">旅行路线</a><a href="#days">每天怎么玩</a><a href="#hotels">住在哪里</a><a href="#food">吃点好吃的</a><a href="#little-adventure">布布的探险本</a></nav></div></header>
 <div class="hero" id="top">
@@ -404,33 +407,68 @@ html.motion-paused .postcard :is(.cloud,.star,.scene-train,.sun-rays){animation-
     </section>
 
     <section id="prepare">
-      <div class="section-head"><div><p class="section-kicker">Weather &amp; packing</p><h2>穿衣与行前准备</h2></div><p class="section-note">银川 10 月初历史平均高低温约 19℃ / 7℃，沙漠风大时体感更低；真正预报请在 9 月 25 日后更新。</p></div>
-      <div class="grid-3" style="margin-bottom:16px">
+      <div class="section-head"><div><p class="section-kicker">Weather &amp; packing</p><h2>穿衣与行前准备</h2></div><p class="section-note">沙坡头附近 2021—2025 年国庆前 7 天，日最高温平均约 18.1℃、最低温平均约 9.0℃。年份差异明显，出发前 7 天再看逐日预报与预警。</p></div>
+      <div class="weather-grid">
         <article class="card info-card"><div class="index">晨</div><h3>早晨与观星</h3><p>孩子与老人：保暖打底 + 薄抓绒 + 防风外套 + 长裤。外公外婆各备轻薄羽绒背心、护膝和暖帽，不等觉得冷才加衣。</p></article>
         <article class="card info-card"><div class="index">昼</div><h3>白天玩沙</h3><p>全员长袖防晒衣、速干长裤和防滑包脚运动鞋。老人不穿底薄或鞋帮松的鞋，手杖需加大面积防陷脚垫。</p></article>
-        <article class="card info-card"><div class="index">风</div><h3>大风 / 扬沙</h3><p>孩子和老人都备护目镜、口罩 / 脖套、防风帽；隐形眼镜改框架眼镜。出现胸闷、眩晕或持续咳嗽立即进入室内。</p></article>
+        <article class="card info-card"><div class="index">风</div><h3>大风 / 扬沙</h3><p>成人备 KN95 / N95、防风护目镜和有系带的帽子；孩子使用合脸、能顺畅呼吸的儿童口罩。隐形眼镜改框架眼镜，强风沙时老人孩子先回室内。</p></article>
+        <article class="card info-card"><div class="index">雨</div><h3>降温与小雨</h3><p>轻量雨衣比雨伞更适合风中使用，背包装防雨罩。穿防滑包脚鞋并带备用袜；下雨或项目暂停时，直接启用每日行程里的雨天替代。</p></article>
       </div>
+      <article class="card weather-history" aria-labelledby="history-weather-title">
+        <div class="weather-history-head"><div><p class="section-kicker">Past five years</p><h3 id="history-weather-title">往年国庆天气参考</h3></div><p>以下为沙坡头附近再分析数据，统计每年 10 月 1—7 日。五年 35 天中有 15 天出现至少 0.1 mm 降水；最低温曾约 2.6℃，最大阵风约 58.7 km/h。它适合决定带什么，不代表 2026 年预报。</p></div>
+        <div class="weather-summary"><span>五年平均高温 18.1℃</span><span>五年平均低温 9.0℃</span><span>降水日 15 / 35</span><span>最大阵风 58.7 km/h</span></div>
+        <div class="weather-years">
+          <div class="weather-year"><b>2021</b><span>19.2 / 10.1℃</span><span>4 天降水 · 13.1 mm</span></div>
+          <div class="weather-year"><b>2022</b><span>18.4 / 9.2℃</span><span>3 天降水 · 1.7 mm</span></div>
+          <div class="weather-year"><b>2023</b><span>17.6 / 9.8℃</span><span>4 天降水 · 24.0 mm</span></div>
+          <div class="weather-year"><b>2024</b><span>17.1 / 7.1℃</span><span>无可测降水</span></div>
+          <div class="weather-year"><b>2025</b><span>18.4 / 9.0℃</span><span>4 天降水 · 10.7 mm</span></div>
+        </div>
+        <p class="weather-source">高低温为 7 天日最高 / 最低温的平均值；数据来自 <a href="https://open-meteo.com/en/docs/historical-weather-api">Open-Meteo 历史天气 API</a>（沙坡头附近坐标，ERA5 / IFS 再分析）。</p>
+      </article>
       <article class="card check">
           <div class="check-heading"><h3>出发前，一件件准备好</h3><output id="check-count" aria-live="polite"></output></div><p class="check-note" id="check-note">9 月 30 日前整理好行李；勾选进度只保存在当前设备。</p><progress id="check-progress" value="0" max="1" aria-label="行前准备完成进度"></progress>
-          <div class="check-list"><label class="check-item"><input type="checkbox" data-check="prep-pack"><span>9 月 30 日整理沙漠行李：防风外套、护目镜、常用药、润唇膏和保温杯；晚上早点休息</span></label>
-            <label class="check-item"><input type="checkbox" data-check="prep-1"><span>将 G902、G1127、C9873 和 D1081 的订单截图发到家庭群并离线保存</span></label>
-            <label class="check-item"><input type="checkbox" data-check="prep-2"><span>3.5 岁孩子未满 6 岁：不占席可申明免费乘车；国庆同行舒适度优先时购买儿童优惠票单独占席</span></label>
-            <label class="check-item"><input type="checkbox" data-check="prep-3"><span>春秋航空核对航站楼、托运行李和儿童随身物品规则</span></label>
-            <label class="check-item"><input type="checkbox" data-check="prep-4"><span>四家酒店均为两间房已订；只确认同楼层 / 同区域与 5 人餐食权益</span></label>
-            <label class="check-item"><input type="checkbox" data-check="prep-5"><span>核对 5 人早餐、晚餐、景区门票和酒店活动包含人数</span></label>
-            <label class="check-item"><input type="checkbox" data-check="prep-6"><span>购买 10 月 5 日 C8212 中卫南 14:00 → 银川 15:18</span></label>
-            <label class="check-item"><input type="checkbox" data-check="prep-7"><span>查询中卫风力、扬沙预警与沙坡头项目开放</span></label>
-            <label class="check-item"><input type="checkbox" data-check="prep-8"><span>购买 10 月 7 日 G2731 南昌西 09:16 → 深圳北约 13:34</span></label>
-            <label class="check-item"><input type="checkbox" data-check="prep-9"><span>老人慢性病药按每日分袋，另带 2 天余量、处方 / 药名照片和紧急联系人卡</span></label>
-            <label class="check-item"><input type="checkbox" data-check="prep-10"><span>血压计按老人平日需要携带；晕车药、止泻药等先确认与常用药无冲突</span></label>
-            <label class="check-item"><input type="checkbox" data-check="prep-11"><span>证件、防晒、润唇膏、护目镜、保温杯、防滑鞋和护膝装包</span></label>
-            <label class="check-item"><input type="checkbox" data-check="prep-12"><span>给孩子制作姓名 + 家长电话卡，放在外套内袋</span></label>
+          <div class="check-groups">
+            <section class="check-group"><h4><span>01</span>票务与预订</h4><p class="check-group-note">先处理有时效的订单与确认事项。</p><div class="check-list">
+              <label class="check-item"><input type="checkbox" data-check="prep-1"><span>将 G902、G1127、C9873、9C6695 和 D1081 的订单截图发到家庭群并离线保存</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-2"><span>确认布布各段车票是否单独占席，并把儿童乘车凭证放进证件包</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-3"><span>春秋航空核对航站楼、托运行李额度和儿童随身物品规则</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-4"><span>四家酒店两间房已订；确认同楼层 / 同区域与 5 人餐食权益</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-5"><span>核对景区门票、酒店活动和接驳包含人数，预约项目不排满</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-6"><span>购买 10 月 5 日 C8212 中卫南 14:00 → 银川 15:18</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-8"><span>购买 10 月 7 日 G2731 南昌西 09:16 → 深圳北约 13:34</span></label>
+            </div></section>
+            <section class="check-group"><h4><span>02</span>证件与健康</h4><p class="check-group-note">证件随身带，药品按人分装。</p><div class="check-list">
+              <label class="check-item"><input type="checkbox" data-check="prep-docs"><span>5 人身份证件、孩子乘车凭证、银行卡与少量现金装进防水证件袋</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-9"><span>老人慢性病药按每日分袋，另带 2 天余量、处方 / 药名照片和紧急联系人卡</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-10"><span>血压计按老人平日需要携带；晕车药、止泻药等先确认与常用药无冲突</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-child-meds"><span>孩子常用药、体温计、创可贴、消毒棉片和驱蚊用品单独装袋</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-12"><span>给布布制作姓名 + 家长电话卡，放在外套内袋</span></label>
+            </div></section>
+            <section class="check-group sand"><h4><span>03</span>沙漠随身包</h4><p class="check-group-note">进入沙漠当天随身背，不放在大行李里。</p><div class="check-list">
+              <label class="check-item"><input type="checkbox" data-check="prep-11"><span>全员 SPF50+ 防晒霜、润唇膏、保湿霜和保温杯；每 2 小时补涂一次</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-sand-eye"><span>防风包边护目镜 5 副；孩子款带固定带，戴眼镜者准备可罩在外面的款式</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-sand-mask"><span>成人 KN95 / N95 备用口罩；布布准备合脸、试戴后能顺畅呼吸的儿童防护口罩</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-sand-head"><span>宽檐帽或防风帽、脖套与薄手套；帽子必须有系带，脖套不蒙住孩子口鼻</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-sand-shoes"><span>包脚防滑鞋、沙套和备用袜；鞋口收紧，老人手杖加防陷脚垫</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-sand-clean"><span>生理盐水 / 洗眼液、纸巾、湿巾、免洗洗手液和密封垃圾袋</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-sand-device"><span>手机与相机装密封防沙袋，带镜头刷；不用嘴吹镜头和接口里的细沙</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-sand-water"><span>按人分装饮水、少量电解质饮品和不易融化的小零食，孩子随时少量补水</span></label>
+            </div></section>
+            <section class="check-group rain"><h4><span>04</span>保暖与雨天</h4><p class="check-group-note">风里优先雨衣，不依赖雨伞。</p><div class="check-list">
+              <label class="check-item"><input type="checkbox" data-check="prep-pack"><span>全员按“保暖打底 + 薄抓绒 + 防风外套”分层装衣，老人另带轻薄羽绒背心</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-raincoat"><span>轻量雨衣 5 件，孩子款不拖地；大风时不撑伞</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-rain-bag"><span>背包防雨罩、电子设备防水袋和几只大号密封袋</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-rain-clothes"><span>每人至少一双备用袜，布布多备一套速干内衣裤和长裤</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-7"><span>出发前 7 天起每天查看中卫风力、降雨、扬沙预警与沙坡头项目开放情况</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-weather-plan"><span>把室内替代地点和酒店电话离线保存；强风沙、雷雨或项目停运时立即改走雨天方案</span></label>
+            </div></section>
           </div>
       </article>
     </section>
 
     <details id="sources" class="sources"><summary>资料来源与票务更新时间 <span>展开查看 ↗</span></summary>
-      <div class="section-head"><div><p class="section-kicker">Verified references</p><h2>核验来源与说明</h2></div><p class="section-note">基础资料查询于 2026 年 9 月 1 日，车票状态更新于 9 月 18 日。天气、景区项目和酒店活动仍可能临时调整。</p></div>
+      <div class="section-head"><div><p class="section-kicker">Verified references</p><h2>核验来源与说明</h2></div><p class="section-note">基础资料查询于 2026 年 9 月 1 日，车票状态更新于 9 月 18 日，历史天气数据更新于 9 月 21 日。天气、景区项目和酒店活动仍可能临时调整。</p></div>
       <div class="card" style="padding:24px">
         <ol class="source-list">
           <li><a href="https://flights.ch.com/flight-date/num-9C6695/">春秋航空 9C6695 航班时刻</a></li>
@@ -453,6 +491,9 @@ html.motion-paused .postcard :is(.cloud,.star,.scene-train,.sun-rays){animation-
           <li><a href="https://www.yinchuan.gov.cn/sshc/lyjd/csgy/202302/t20230228_3977767.html">银川市政府：览山公园</a></li>
           <li><a href="https://you.ctrip.com/yougourmet/restaurantlist/zhongwei1184.html">中卫餐厅与人均参考</a></li>
           <li><a href="https://tjj.yinchuan.gov.cn/zzb/ndsj_72224/202005/P020251208402403858628.pdf">银川历史气候统计参考</a></li>
+          <li><a href="https://open-meteo.com/en/docs/historical-weather-api">Open-Meteo 历史天气 API：沙坡头附近 2021—2025 年 10 月 1—7 日再分析数据</a></li>
+          <li><a href="https://www.nhc.gov.cn/jkj/c100062/202103/4f9a486e0e8544e089c3232b158d139b.shtml">国家卫生健康委：沙尘天气下的健康防护提示</a></li>
+          <li><a href="https://www.cma.gov.cn/2011xzt/kpbd/Sand/2018050905/201812/t20181213_485778.html">中国气象局：沙尘暴防灾应急要点</a></li>
         </ol>
         <div class="fineprint">已购车票状态更新于 2026 年 9 月 18 日。出发前再看一次 12306、航空公司订单和酒店通知。</div>
       </div>
@@ -490,6 +531,7 @@ html.motion-paused .postcard :is(.cloud,.star,.scene-train,.sun-rays){animation-
  });
  if (!persistent) document.getElementById('check-note').textContent = '9 月 30 日前整理好行李；当前浏览器无法保存勾选进度，刷新后需重新勾选。';
  update();
+
  const toggle = document.getElementById('motion-toggle');
  const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
  let paused = preference.matches;
