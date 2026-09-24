@@ -135,7 +135,20 @@ footer{background:#eaf1f6a8;border-top:1px solid #fff}.sources{border-color:#819
 html.motion-paused .postcard :is(.cloud,.star,.scene-train,.sun-rays){animation-play-state:paused!important}
 
 .ticket-notes{display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--muted);font-size:12px;margin-bottom:12px}
-.transport-list{display:grid;gap:13px;margin:0;padding:0;list-style:none}.transport-day{overflow:hidden;border:1px solid #ffffffdf;border-radius:22px;background:linear-gradient(140deg,#ffffffc9,#f5f9fba1);box-shadow:0 7px 22px #35587910,inset 0 1px 0 white}.transport-day-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 16px;background:#dfeaf1a8;border-bottom:1px solid #91a9b72b}.transport-date{color:var(--green);font-size:13px;font-weight:800;font-variant-numeric:tabular-nums}.transport-day-head small{color:var(--muted);font-size:10px}.transport-journey{padding:13px 16px}.transport-journey+.transport-journey{border-top:1px solid #8ea5b329}.transport-route{display:grid;grid-template-columns:minmax(0,1fr) 74px minmax(0,1fr);align-items:center;gap:10px;min-height:54px;border-radius:12px;transition:transform .14s ease,background .14s ease}.transport-route:hover{background:#ffffff69}.transport-route:active{transform:scale(.99)}.transport-point{min-width:0}.transport-point:last-child{text-align:right}.transport-place,.transport-time{display:block;overflow-wrap:anywhere}.transport-place{font-size:14px;font-weight:700;line-height:1.35}.transport-time{margin-top:3px;color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}.transport-point:last-child .transport-time{margin:0 0 3px;color:var(--green);font-weight:800}.transport-connector{text-align:center;min-width:0}.transport-code{display:block;color:var(--blue);font-size:13px;line-height:1.25;overflow-wrap:anywhere}.transport-kind{display:block;margin-top:5px;color:var(--muted);font-size:9px;line-height:1.2}.transport-meta{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px;margin-top:8px;padding-top:8px;border-top:1px solid #8ea5b323;color:var(--muted);font-size:10px;line-height:1.45}.transport-passengers{text-align:right}.transport-meta .tag{font-size:9px;padding:2px 7px}.transport-seats{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-top:8px}.transport-seats::before{content:"座位";color:var(--muted);font-size:9px}.transport-seat{padding:3px 7px;border:1px solid #c9dbe4;border-radius:99px;background:#edf4f7;color:#31596f;font-size:9px;line-height:1.3;font-variant-numeric:tabular-nums}
+.transport-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));align-items:start;gap:13px;margin:0;padding:0;list-style:none}.transport-day{min-width:0;overflow:hidden;border:1px solid #ffffffdf;border-radius:22px;background:linear-gradient(140deg,#ffffffc9,#f5f9fba1);box-shadow:0 7px 22px #35587910,inset 0 1px 0 white}.transport-day-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 16px;background:#dfeaf1a8;border-bottom:1px solid #91a9b72b}.transport-date{color:var(--green);font-size:13px;font-weight:800;font-variant-numeric:tabular-nums}.transport-day-head small{color:var(--muted);font-size:10px}.transport-journey{padding:13px 16px}.transport-journey+.transport-journey{border-top:1px solid #8ea5b329}.transport-route{display:grid;grid-template-columns:minmax(0,1fr) 74px minmax(0,1fr);align-items:center;gap:10px;min-height:54px;border-radius:12px;transition:transform .14s ease,background .14s ease}.transport-route:hover{background:#ffffff69}.transport-route:active{transform:scale(.99)}.transport-point{min-width:0}.transport-point:last-child{text-align:right}.transport-place,.transport-time{display:block;overflow-wrap:anywhere}.transport-place{font-size:14px;font-weight:700;line-height:1.35}.transport-time{margin-top:3px;color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}.transport-point:last-child .transport-time{margin:0 0 3px;color:var(--green);font-weight:800}.transport-connector{text-align:center;min-width:0}.transport-code{display:block;color:var(--blue);font-size:13px;line-height:1.25;overflow-wrap:anywhere}.transport-kind{display:block;margin-top:5px;color:var(--muted);font-size:9px;line-height:1.2}.transport-meta{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px;margin-top:8px;padding-top:8px;border-top:1px solid #8ea5b323;color:var(--muted);font-size:10px;line-height:1.45}.transport-passengers{text-align:right}.transport-meta .tag{font-size:9px;padding:2px 7px}.transport-seats{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-top:8px}.transport-seats::before{content:"座位";color:var(--muted);font-size:9px}.transport-seat{padding:3px 7px;border:1px solid #c9dbe4;border-radius:99px;background:#edf4f7;color:#31596f;font-size:9px;line-height:1.3;font-variant-numeric:tabular-nums}
+.transport-controls{display:none}
+@media(min-width:1000px){
+ .transport-controls{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin:-2px 0 12px;color:var(--muted);font-size:11px}
+ .transport-controls span{margin-right:4px}
+ .transport-controls button{display:grid;place-items:center;width:40px;height:40px;border:1px solid #c9dbe4;border-radius:50%;background:#ffffffb8;color:var(--green);font:inherit;font-size:20px;cursor:pointer}
+ .transport-controls button:hover:not(:disabled){background:#fff}
+ .transport-controls button:disabled{opacity:.38;cursor:default}
+ .transport-controls button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+ .transport-list{display:flex;align-items:stretch;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;scrollbar-width:none;-ms-overflow-style:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+ .transport-list::-webkit-scrollbar{display:none}
+ .transport-day{display:flex;flex-direction:column;flex:0 0 340px;scroll-snap-align:start}
+ .transport-day-head{flex:none}
+}
 .ticket-footnote{font-size:12px;color:var(--muted);margin-top:13px}
 .ticket-options{font-size:12px;margin-top:16px;color:var(--muted)}
 .ticket-options summary{cursor:pointer;color:var(--green);font-weight:700;min-height:36px}
@@ -219,6 +232,7 @@ html.motion-paused .postcard :is(.cloud,.star,.scene-train,.sun-rays){animation-
 <section id="tickets">
 <div class="section-head"><div><p class="section-kicker">On the way</p><h2>交通总表</h2></div><p class="section-note">只列飞机与铁路行程，按日期和出发时间排列。点击路线，可跳到当天行程。</p></div>
 <div class="ticket-notes"><span>全家：爸爸、妈妈、布布、外公、外婆</span><span>车次与座位按 9 月 23 日最新订单截图更新</span><span>截图仅显示成人座位，布布未显示独立座位</span></div>
+<div class="transport-controls"><span>左右滑动查看日期</span><button id="transport-prev" type="button" aria-label="查看较早日期" disabled>←</button><button id="transport-next" type="button" aria-label="查看后续日期">→</button></div>
 <ol class="transport-list" aria-label="10 月 1—7 日飞机与铁路行程">
   <li class="transport-day"><div class="transport-day-head"><time class="transport-date">10 月 1 日</time><small>3 段行程</small></div>
     <div class="transport-journey"><a class="transport-route" href="#day-1" aria-label="G1127，上饶 11:02 到南昌西 13:02"><div class="transport-point"><b class="transport-place">上饶</b><time class="transport-time">11:02</time></div><div class="transport-connector"><b class="transport-code">G1127</b><small class="transport-kind">高铁</small></div><div class="transport-point"><time class="transport-time">13:02</time><b class="transport-place">南昌西</b></div></a><div class="transport-meta"><span>2 小时</span><span class="transport-passengers">外公 · 黄耀发</span><span class="tag green">已购票</span></div><div class="transport-seats"><span class="transport-seat">黄耀发 · 03车17C</span></div></div>
@@ -318,18 +332,19 @@ html.motion-paused .postcard :is(.cloud,.star,.scene-train,.sun-rays){animation-
         </article>
 
         <article class="card day" id="day-5">
-          <div class="day-head"><div class="day-no"><small>Day</small><strong>5</strong></div><div class="day-title"><h3>10 月 5 日｜下午去银川看日落</h3><p>金沙海 → 中卫南 → 银川 → 览山公园</p></div><div class="weather-pill">D8942 · 14:12 发车</div></div>
+          <div class="day-head"><div class="day-no"><small>Day</small><strong>5</strong></div><div class="day-title"><h3>10 月 5 日｜下午到银川</h3><p>金沙海 → 中卫南 → 银川 → 览山公园／雨天宁夏博物馆</p></div><div class="weather-pill">D8942 · 14:12 发车</div></div>
           <div class="day-stay"><span aria-hidden="true">🌅</span> 住银川金凤通达南街亚朵</div><div class="day-body">
             <div class="timeline">
               <div class="event"><div class="time">07:30–10:30</div><div><h4>早餐 + 火车酒店亲子活动</h4><p>选沙漠徒步、观海楼、自由挖沙或酒店研学活动中的一项，不再购买大套票。10:30 回房洗手洗脸、整理行李。</p></div></div>
               <div class="event"><div class="time">10:45–12:15</div><div><h4>早午餐与退房</h4><p>在火车酒店吃午餐或带简餐，12:15 前退房。可先问酒店送站车的车型、费用和能否装下 5 人行李；若不合适就约 7 座网约车或分两辆。</p></div></div>
               <div class="event"><div class="time">12:15–13:15</div><div><h4>金沙海火车主题旅馆 → 中卫南站 <span class="trip-meta">车程估约 35–45 分钟</span></h4><p>直接导航“中卫南站”出发，计划 13:15 前到站，给安检、如厕和带孩子进站留近一小时。平台显示酒店有送站服务，但是否覆盖中卫南、报价及 7 座车型须提前问清。</p></div></div>
               <div class="event"><div class="time">14:12–15:28</div><div><h4>D8942 中卫南 → 银川 <span class="trip-meta">已购票 · 1 小时 16 分</span></h4><p>全家 5 人同行，4 位成人的 06 车座位已记在交通总表；布布的乘车信息按订单核对。</p><div class="tag-row"><span class="tag green">已购票</span><span class="tag blue">直达银川</span></div></div></div>
-              <div class="event"><div class="time">15:28–16:45</div><div><h4>银川站 → 银川金凤通达南街亚朵酒店</h4><p>先叫车到创投大厦 B 座，办好两间房并让布布歇一会。今天只再安排一处户外景点。</p></div></div>
-              <div class="event"><div class="time">17:20–19:30</div><div><h4>览山公园看日落</h4><p>从酒店打车去览山，先在下方广场和露天剧场走走。10 月 5 日日落约 18:32，17:30–18:00 到比较从容；上方看台有 208 级台阶，外公外婆和布布不必勉强登顶。日落后避开集中叫车，再去金凤区北颂冰煮羊（万达旗舰店）吃晚餐；太累就回酒店附近吃清汤面。<a href="#food">店铺定位在这里</a>。</p><div class="tag-row"><span class="tag green">公园免费</span><span class="tag blue">全家慢走</span></div></div></div>
+              <div class="event"><div class="time">晴天 15:28–16:45</div><div><h4>银川站 → 银川金凤通达南街亚朵酒店</h4><p>先叫车到创投大厦 B 座，办好两间房并让布布歇一会；雨天按下方安排，先去博物馆，参观后再入住。</p></div></div>
+              <div class="event"><div class="time">晴天 17:20–19:30</div><div><h4>览山公园看日落</h4><p>从酒店打车去览山，先在下方广场和露天剧场走走。10 月 5 日日落约 18:32，17:30–18:00 到比较从容；上方看台有 208 级台阶，外公外婆和布布不必勉强登顶。日落后避开集中叫车，再去金凤区北颂冰煮羊（万达旗舰店）吃晚餐；太累就回酒店附近吃清汤面。<a href="#food">店铺定位在这里</a>。</p><div class="tag-row"><span class="tag green">公园免费</span><span class="tag blue">全家慢走</span></div></div></div>
+              <div class="event"><div class="time">雨天 15:28 后</div><div><h4>银川站 → 宁夏博物馆 → 酒店</h4><p>下雨就不去览山。若宁夏博物馆公布国庆当天开放、预约成功，且来得及在停止入馆前抵达，出站后直接叫车去金凤区人民广场东街 6 号；参观后再去亚朵办理入住。大件行李能否寄存先问馆方，酒店到博物馆约 5–7 公里，打车估约 15–25 分钟，雨天以实时导航为准。<a href="https://ditu.amap.com/place/B03B703MJK" target="_blank" rel="noopener noreferrer">高德查看博物馆 ↗</a> 若当天闭馆或赶不上入馆，就直接去酒店休息，不再赶景点。</p><div class="tag-row"><span class="tag blue">室内备选</span><span class="tag gold">先确认节日开放</span></div></div></div>
             </div>
             <aside class="side-stack">
-              <div class="side-box"><h4>雨天替代</h4><ul><li>宁夏博物馆需关注官方预约</li><li>若到银川晚，直接酒店休息</li><li>西夏陵不放本日主线：往返远、游览至少半天</li></ul></div>
+              <div class="side-box"><h4>雨天替代</h4><ul><li>宁夏博物馆常规周一闭馆；10 月 5 日虽是国庆假期，须以 2026 年节日公告为准</li><li>常规 16:30 停止入馆，先确认开放时段并预约，再决定是否从银川站直达</li><li>若到银川晚或行李寄存不便，直接去酒店休息</li></ul></div>
               <div class="side-box"><h4>览山提醒</h4><ul><li>风大，先戴帽、穿防风外套</li><li>台阶多，走到哪里算哪里</li><li>进园先约好会合点</li></ul></div>
             </aside>
           </div>
@@ -368,7 +383,7 @@ html.motion-paused .postcard :is(.cloud,.star,.scene-train,.sun-rays){animation-
         <article class="card hotel"><div class="hotel-top"><small>10 月 2 日 · 中卫市区 · 2 间已订</small><h3>千年走卫城文创酒店（鼓楼店）</h3></div><div class="hotel-body"><p>电话：0955-6509666。到店只需争取两间房同楼层相邻，不再补房。</p><ul><li>先向前台领取 / 了解文创区、非遗手作和亲子活动表</li><li>夫妻与孩子可体验文创区，外公外婆一起逛或回房休息</li><li>早餐优先蒿子面、热粥、鸡蛋和水果</li><li>确认订单所含早餐人数，以及 5 人接送车型</li></ul></div></article>
         <article class="card hotel"><div class="hotel-top"><small>10 月 3 日 · 沙坡头片区 · 2 间已订</small><h3>中卫一叶星空酒店</h3></div><div class="hotel-body"><p>地址：沙坡头景区时空之门西侧约 881 米。两间帐篷争取同一区域、离主通道远一些。公开酒店页没有可核实的直拨号码；请打开已订房订单的“联系酒店”，保存管家来电。景区票务电话 400-155-1766 不等于酒店前台。</p><ul><li>市区打车到酒店接待停车场；酒店与时空之门之间有接驳车，住客称约半小时一班，但节假日班次及上车点以管家通知为准</li><li>有住客提到房内防沙面巾、洞洞鞋和公用滑沙板；未查到免费鞋套的可靠说明，五人自带</li><li>晚餐自助住客价参考成人 ¥100–118；先核对两间房包含的早晚餐人数和布布身高收费</li><li>孩子午休后玩沙，晚间观星按天气与当天活动表决定</li></ul></div></article>
         <article class="card hotel"><div class="hotel-top"><small>10 月 4 日 · 金沙海度假区 · 2 间已订</small><h3>中卫金沙海火车主题旅馆</h3></div><div class="hotel-body"><p>两间车厢房已订；酒店电话：<a href="tel:09553951666">0955-3951666</a>。到店争取相邻，房间紧凑时把大箱集中放一间。</p><ul><li>拍绿皮火车、借滑沙板玩沙，问当日观星、篝火与短徒步安排</li><li>站台大厅餐厅、火车餐厅可吃炒菜和面食；晚餐菜单与儿童餐先问前台</li><li>住客提到项目折扣，但比例不一致，付费项现场比价后再买</li><li>早餐约 07:30–09:00；平台显示送站服务，提前确认中卫南站、车型和费用</li></ul></div></article>
-        <article class="card hotel"><div class="hotel-top"><small>10 月 5 日 · 银川金凤区 · 2 间已订</small><h3>银川金凤通达南街亚朵酒店</h3></div><div class="hotel-body"><p>地址：通达南街创投大厦 B 座一楼大厅；距银川站约 3.5 公里，网约 10–15 分钟。</p><ul><li>入住后预约次日 10:15 的 7 座车或两辆车到银川站</li><li>竹居书吧适合孩子读绘本，也可作为全家短休点</li><li>自助洗衣房当晚完成洗烘；健身房按体力使用</li><li>早餐、免费停车、行李寄存可用，退房前检查两间房</li></ul></div></article>
+        <article class="card hotel"><div class="hotel-top"><small>10 月 5 日 · 银川金凤区 · 2 间已订</small><h3>银川金凤通达南街亚朵酒店</h3></div><div class="hotel-body"><p>地址：通达南街创投大厦 B 座一楼大厅；距银川站约 3.5 公里，网约 10–15 分钟。距<a href="https://ditu.amap.com/place/B03B703MJK" target="_blank" rel="noopener noreferrer">宁夏博物馆</a>约 5–7 公里，打车估约 15–25 分钟，雨天可能更久。</p><ul><li>入住后预约次日 10:15 的 7 座车或两辆车到银川站</li><li>竹居书吧适合孩子读绘本，也可作为全家短休点</li><li>自助洗衣房当晚完成洗烘；健身房按体力使用</li><li>早餐、免费停车、行李寄存可用，退房前检查两间房</li></ul></div></article>
       </div>
     </section>
 
@@ -381,7 +396,7 @@ html.motion-paused .postcard :is(.cloud,.star,.scene-train,.sun-rays){animation-
         <div class="food-row"><strong>中卫备选</strong><span>金叶子餐厅</span><span>中央东大道 100 号，需叫车；手抓羊肉、清炖羊肉、沙葱炒蛋适合分着吃。<span class="food-links"><a href="https://ditu.amap.com/place/B0FFF4NWGK" target="_blank" rel="noopener noreferrer">高德定位 ↗</a></span></span><span class="price">约 ¥70–100</span></div>
         <div class="food-row"><strong>10/3 一叶星空</strong><span>中卫一叶星空酒店自助晚餐</span><span>就在入住酒店内，手抓羊肉、热菜、面食按当日餐台选；先核对两间房含餐人数、儿童身高标准。<span class="food-links"><a href="https://uri.amap.com/search?keyword=中卫一叶星空酒店&amp;city=中卫&amp;src=bubu-family-travel" target="_blank" rel="noopener noreferrer">高德查酒店 ↗</a><a href="https://www.xiaohongshu.com/explore/6a3cfb0f000000001102fbb5" target="_blank" rel="noopener noreferrer">小红书餐费参考 ↗</a></span></span><span class="price">成人约 ¥100–118</span></div>
         <div class="food-row"><strong>10/4 金沙海</strong><span>金沙海火车主题旅馆·站台大厅餐厅／火车餐厅</span><span>都在入住酒店内；炒菜、清汤面、小火锅按当晚菜单选，先问儿童餐与营业时间。<span class="food-links"><a href="https://uri.amap.com/search?keyword=中卫金沙海火车主题旅馆&amp;city=中卫&amp;src=bubu-family-travel" target="_blank" rel="noopener noreferrer">高德查酒店 ↗</a><a href="https://www.xiaohongshu.com/explore/6a6b6e8b0000000035017eed" target="_blank" rel="noopener noreferrer">小红书住客体验 ↗</a></span></span><span class="price">以当日菜单为准</span></div>
-        <div class="food-row"><strong>10/5 银川金凤区</strong><span>北颂冰煮羊（万达旗舰店）</span><span>金凤区亲水北大街 9 号万达中心一楼；览山日落后打车去，羊肉和清汤先上，布布避开辣蘸料。累了就改在酒店附近吃面。<span class="food-links"><a href="https://uri.amap.com/search?keyword=银川北颂冰煮羊万达旗舰店&amp;city=银川&amp;src=bubu-family-travel" target="_blank" rel="noopener noreferrer">高德查店 ↗</a><a href="https://www.xiaohongshu.com/explore/6a7baac30000000029032a56" target="_blank" rel="noopener noreferrer">小红书探店 ↗</a></span></span><span class="price">约 ¥120–150</span></div>
+        <div class="food-row"><strong>10/5 银川金凤区</strong><span>北颂冰煮羊（万达旗舰店）</span><span>金凤区亲水北大街 9 号万达中心一楼；晴天览山看日落后、雨天从博物馆出来后都可打车去。羊肉和清汤先上，布布避开辣蘸料；累了就改在酒店附近吃面。<span class="food-links"><a href="https://uri.amap.com/search?keyword=银川北颂冰煮羊万达旗舰店&amp;city=银川&amp;src=bubu-family-travel" target="_blank" rel="noopener noreferrer">高德查店 ↗</a><a href="https://www.xiaohongshu.com/explore/6a7baac30000000029032a56" target="_blank" rel="noopener noreferrer">小红书探店 ↗</a></span></span><span class="price">约 ¥120–150</span></div>
       </div>
       <div class="fineprint"><strong>五人点菜：</strong>西北菜分量大，先点 2–3 道热菜加主食，不够再加。每天给布布留一顿米饭或清汤面，配鸡蛋、清炖肉和蔬菜；不连续两顿烧烤。以上人均是参考区间，节假日以店内菜单为准。</div>
       <div class="grid-3">
@@ -480,11 +495,13 @@ html.motion-paused .postcard :is(.cloud,.star,.scene-train,.sun-rays){animation-
           <li><a href="https://www.xiaohongshu.com/explore/6a463a9c0000000007013a3b">小红书住客：一叶星空接驳与亲子活动</a>、<a href="https://www.xiaohongshu.com/explore/6a3cfb0f000000001102fbb5">自助晚餐实付参考</a>、<a href="https://www.xiaohongshu.com/explore/69d8aa070000000022024992">房间用品与玩沙装备</a></li>
           <li><a href="https://hotels.ctrip.com/hotels/5964259.html">金沙海火车主题旅馆：餐厅、送站与电话</a>；<a href="https://www.xiaohongshu.com/explore/6a6b6e8b0000000035017eed">小红书住客：滑沙、观星与晚餐</a></li>
           <li><a href="https://hotels.corporatetravel.ctrip.com/hotels/135153411.html">银川金凤通达南街亚朵酒店地址、设施与交通</a></li>
+          <li><a href="https://www.wingontravel.com/hotel/detail-yinchuan-135153411/yinchuan-jinfeng-tongda-south-street-atour-hotel/">酒店至宁夏博物馆距离参考（约 5.1 公里）</a>；<a href="https://ph.trip.com/hotels/ningxia-hotel-detail-135153411/yinchuan-jinfeng-tongda-south-street-atour-hotel/">另一平台距离参考（约 6.8 公里）</a></li>
           <li><a href="https://whhlyt.nx.gov.cn/jqjd/zws_66597/nxsptlyq/">宁夏文旅厅：沙坡头开放与项目介绍</a></li>
           <li><a href="https://www.ctgii.com/scenic/holiday/232">中国旅游集团：沙坡头旺季门票、时间及咨询电话</a>；<a href="https://you.ctrip.com/sight/zhongwei1184/50442.html">携程景区页：儿童免票规则</a></li>
           <li><a href="https://www.xiaohongshu.com/explore/6a8502eb0000000032032622">小红书亲子游记：项目套票与排队经验</a>；<a href="https://gs.ctrip.com/html5/you/sight/1184.html">携程中卫景点同日价格参考</a></li>
           <li><a href="https://whhlyt.nx.gov.cn/jqjd/zws_66597/zwgm/">宁夏文旅厅：中卫高庙介绍</a></li>
           <li><a href="https://www.yinchuan.gov.cn/sshc/lyjd/csgy/202302/t20230228_3977767.html">银川市政府：览山公园</a></li>
+          <li><a href="https://www.ycjinfeng.gov.cn/xxgk/zfxxgkml/zdlygk/ggwhfw_59349/gzxx_59352/202512/t20251218_5112483.html">金凤区政府：宁夏博物馆地址、常规开放时间与免费入馆</a>；<a href="https://ditu.amap.com/place/B03B703MJK">高德：宁夏博物馆定位</a></li>
           <li><a href="https://you.ctrip.com/yougourmet/restaurantlist/zhongwei1184.html">中卫餐厅与人均参考</a></li>
           <li><a href="https://www.xiaohongshu.com/explore/6a35d2620000000022008bfd">小红书中卫鼓楼步行路线</a>；<a href="https://gs.ctrip.com/html5/you/foods/fooddetail/1184/149926.html">香山羊羔肉鼓楼南街店地址与菜品</a></li>
           <li><a href="https://www.dianping.com/shop/H6LruTaTGLxkE3HK/photos">大众点评：桂花香手工面鼓楼店</a>；<a href="https://www.xiaohongshu.com/explore/69ff5745000000002301d401">小红书鼓楼店探店</a>；<a href="https://ditu.amap.com/place/B0FFF4NWGK">高德：金叶子餐厅位置</a></li>
@@ -554,6 +571,25 @@ html.motion-paused .postcard :is(.cloud,.star,.scene-train,.sun-rays){animation-
   setMotion();
  });
  setMotion();
+ const transportList = document.querySelector('.transport-list');
+ const transportPrev = document.getElementById('transport-prev');
+ const transportNext = document.getElementById('transport-next');
+ function updateTransportControls() {
+  const end = transportList.scrollWidth - transportList.clientWidth;
+  transportPrev.disabled = transportList.scrollLeft <= 1;
+  transportNext.disabled = transportList.scrollLeft >= end - 1;
+ }
+ function moveTransport(direction) {
+  const listLeft = transportList.getBoundingClientRect().left;
+  const starts = Array.from(transportList.children, card => card.getBoundingClientRect().left - listLeft + transportList.scrollLeft);
+  const target = direction > 0 ? starts.find(left => left > transportList.scrollLeft + 2) : starts.reverse().find(left => left < transportList.scrollLeft - 2);
+  if (target !== undefined) transportList.scrollTo({left:target,behavior:preference.matches ? 'auto' : 'smooth'});
+ }
+ transportPrev.addEventListener('click', () => moveTransport(-1));
+ transportNext.addEventListener('click', () => moveTransport(1));
+ transportList.addEventListener('scroll', updateTransportControls, {passive:true});
+ window.addEventListener('resize', updateTransportControls);
+ updateTransportControls();
  const menu = document.querySelector('.trip-switcher');
  document.addEventListener('click', event => { if (!menu.contains(event.target)) menu.open = false; });
  document.addEventListener('keydown', event => { if (event.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary').focus(); } });
