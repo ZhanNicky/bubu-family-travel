@@ -136,6 +136,8 @@ html.motion-paused .postcard :is(.cloud,.star,.scene-train,.sun-rays){animation-
 
 .ticket-notes{display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--muted);font-size:12px;margin-bottom:12px}
 .transport-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));align-items:start;gap:13px;margin:0;padding:0;list-style:none}.transport-day{min-width:0;overflow:hidden;border:1px solid #ffffffdf;border-radius:22px;background:linear-gradient(140deg,#ffffffc9,#f5f9fba1);box-shadow:0 7px 22px #35587910,inset 0 1px 0 white}.transport-day-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 16px;background:#dfeaf1a8;border-bottom:1px solid #91a9b72b}.transport-date{color:var(--green);font-size:13px;font-weight:800;font-variant-numeric:tabular-nums}.transport-day-head small{color:var(--muted);font-size:10px}.transport-journey{padding:13px 16px}.transport-journey+.transport-journey{border-top:1px solid #8ea5b329}.transport-route{display:grid;grid-template-columns:minmax(0,1fr) 74px minmax(0,1fr);align-items:center;gap:10px;min-height:54px;border-radius:12px;transition:transform .14s ease,background .14s ease}.transport-route:hover{background:#ffffff69}.transport-route:active{transform:scale(.99)}.transport-point{min-width:0}.transport-point:last-child{text-align:right}.transport-place,.transport-time{display:block;overflow-wrap:anywhere}.transport-place{font-size:14px;font-weight:700;line-height:1.35}.transport-time{margin-top:3px;color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}.transport-point:last-child .transport-time{margin:0 0 3px;color:var(--green);font-weight:800}.transport-connector{text-align:center;min-width:0}.transport-code{display:block;color:var(--blue);font-size:13px;line-height:1.25;overflow-wrap:anywhere}.transport-kind{display:block;margin-top:5px;color:var(--muted);font-size:9px;line-height:1.2}.transport-meta{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px;margin-top:8px;padding-top:8px;border-top:1px solid #8ea5b323;color:var(--muted);font-size:10px;line-height:1.45}.transport-passengers{text-align:right}.transport-meta .tag{font-size:9px;padding:2px 7px}.transport-seats{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-top:8px}.transport-seats::before{content:"座位";color:var(--muted);font-size:9px}.transport-seat{padding:3px 7px;border:1px solid #c9dbe4;border-radius:99px;background:#edf4f7;color:#31596f;font-size:9px;line-height:1.3;font-variant-numeric:tabular-nums}
+.transport-point{display:flex;flex-direction:column}
+.transport-point:last-child .transport-time{order:1;margin:3px 0 0}
 .transport-controls{display:none}
 @media(min-width:1000px){
  .transport-controls{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin:-2px 0 12px;color:var(--muted);font-size:11px}
@@ -157,6 +159,7 @@ html.motion-paused .postcard :is(.cloud,.star,.scene-train,.sun-rays){animation-
 @media(max-width:600px){.mobile-dock{grid-template-columns:repeat(5,minmax(0,1fr))}.ticket-notes{display:grid;gap:4px}.transport-list{gap:10px}.transport-day{border-radius:18px}.transport-day-head{padding:10px 13px}.transport-journey{padding:12px 13px}.transport-route{grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr);gap:6px;min-height:52px}.transport-place{font-size:13px}.transport-code{font-size:12px}.transport-meta{grid-template-columns:auto minmax(0,1fr) auto;gap:7px}.transport-passengers{font-size:9px}.transport-seats{gap:4px}.transport-seat{padding:3px 6px}}
 @media(max-width:900px){.weather-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.weather-years{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:600px){.weather-grid,.check-groups{grid-template-columns:1fr}.weather-history{padding:19px}.weather-history-head{display:block}.weather-years{grid-template-columns:repeat(2,minmax(0,1fr))}.check-group{padding:15px}.check-group .check-item{padding:9px 0}}
+.check-group.elders{background:#faf5ed;border-color:#e8dccb}.check-group.elders h4 span{background:#f1e4d1;color:#765c3d}.check-group.family{background:#eef5f8;border-color:#d2e1e8}
 </style></head>
 <body id="page-top"><a class="skip-link" href="#main">跳到行程正文</a><header class="topbar"><div class="shell"><div class="top-inner"><a class="brand" href="../../index.html"><span class="brand-mark" aria-hidden="true">✳</span><span>布布一家<small>OUR LITTLE ADVENTURES</small></span></a><div class="site-nav"><a class="home-link" href="../../index.html">← 旅行主页</a><details class="trip-switcher"><summary>旅行档案 ↗</summary><nav class="trip-menu" aria-label="旅行档案"><a href="./index.html" aria-current="page"><b>宁夏 · 沙漠与星空</b><small>2026.10.01—10.07</small></a><a href="../../index.html#all-trips">全部旅行计划 →</a></nav></details></div></div><nav class="nav" aria-label="本页导航"><a href="#prepare">行前准备</a><a href="#tickets">交通总表</a><a href="#route">旅行路线</a><a href="#days">每天怎么玩</a><a href="#hotels">住在哪里</a><a href="#food">吃点好吃的</a><a href="#little-adventure">布布的探险本</a></nav></div></header>
 <div class="hero" id="top">
@@ -231,7 +234,7 @@ html.motion-paused .postcard :is(.cloud,.star,.scene-train,.sun-rays){animation-
 
 <section id="tickets">
 <div class="section-head"><div><p class="section-kicker">On the way</p><h2>交通总表</h2></div><p class="section-note">只列飞机与铁路行程，按日期和出发时间排列。点击路线，可跳到当天行程。</p></div>
-<div class="ticket-notes"><span>全家：爸爸、妈妈、布布、外公、外婆</span><span>车次与座位按最新订单截图更新</span><span>部分截图仅显示成人座位，布布未显示独立座位</span></div>
+<div class="ticket-notes"><span>全家：爸爸、妈妈、布布、外公、外婆</span><span>车次与座位按已提供的订单和补充信息更新</span><span>部分截图仅显示成人座位，布布未显示独立座位</span></div>
 <div class="transport-controls"><span>左右滑动查看日期</span><button id="transport-prev" type="button" aria-label="查看较早日期" disabled>←</button><button id="transport-next" type="button" aria-label="查看后续日期">→</button></div>
 <ol class="transport-list" aria-label="10 月 1—7 日飞机与铁路行程">
   <li class="transport-day"><div class="transport-day-head"><time class="transport-date">10 月 1 日</time><small>3 段行程</small></div>
@@ -240,7 +243,7 @@ html.motion-paused .postcard :is(.cloud,.star,.scene-train,.sun-rays){animation-
     <div class="transport-journey"><a class="transport-route" href="#day-1" aria-label="G9873，婺源 14:03 到南昌东 15:32"><div class="transport-point"><b class="transport-place">婺源</b><time class="transport-time">14:03</time></div><div class="transport-connector"><b class="transport-code">G9873</b><small class="transport-kind">高铁</small></div><div class="transport-point"><time class="transport-time">15:32</time><b class="transport-place">南昌东</b></div></a><div class="transport-meta"><span>1 小时 29 分</span><span class="transport-passengers">外婆 · 王雪影</span><span class="tag green">已购票</span></div><div class="transport-seats"><span class="transport-seat">王雪影 · 02车01B</span></div></div>
   </li>
   <li class="transport-day"><div class="transport-day-head"><time class="transport-date">10 月 2 日</time><small>2 段主选 · 1 段备选</small></div>
-    <div class="transport-journey"><a class="transport-route" href="#day-2" aria-label="9C6695，南昌昌北机场 09:45 到银川河东机场 12:20"><div class="transport-point"><b class="transport-place">南昌昌北机场</b><time class="transport-time">09:45</time></div><div class="transport-connector"><b class="transport-code">9C6695</b><small class="transport-kind">春秋航空</small></div><div class="transport-point"><time class="transport-time">12:20</time><b class="transport-place">银川河东机场</b></div></a><div class="transport-meta"><span>2 小时 35 分</span><span class="transport-passengers">全家（4 大 1 小）</span><span class="tag green">已购票</span></div></div>
+    <div class="transport-journey"><a class="transport-route" href="#day-2" aria-label="9C6695，南昌昌北机场 09:45 到银川河东机场 12:20"><div class="transport-point"><b class="transport-place">南昌昌北机场</b><time class="transport-time">09:45</time></div><div class="transport-connector"><b class="transport-code">9C6695</b><small class="transport-kind">春秋航空</small></div><div class="transport-point"><time class="transport-time">12:20</time><b class="transport-place">银川河东机场</b></div></a><div class="transport-meta"><span>2 小时 35 分</span><span class="transport-passengers">全家（4 大 1 小）</span><span class="tag green">已购票</span></div><div class="transport-seats"><span class="transport-seat">22D</span><span class="transport-seat">23C</span><span class="transport-seat">23D</span><span class="transport-seat">23E</span><span class="transport-seat">23F</span></div></div>
     <div class="transport-journey"><a class="transport-route" href="#day-2" aria-label="D1081，河东机场 14:09 到中卫南 15:09"><div class="transport-point"><b class="transport-place">河东机场</b><time class="transport-time">14:09</time></div><div class="transport-connector"><b class="transport-code">D1081</b><small class="transport-kind">主选动车</small></div><div class="transport-point"><time class="transport-time">15:09</time><b class="transport-place">中卫南</b></div></a><div class="transport-meta"><span>1 小时</span><span class="transport-passengers">全家（4 大 1 小）</span><span class="tag green">已购票</span></div><div class="transport-seats"><span class="transport-seat">詹念吉 · 05车02D</span><span class="transport-seat">王雪影 · 05车02F</span><span class="transport-seat">黄博怡 · 05车04A</span><span class="transport-seat">黄耀发 · 05车04B</span></div></div>
     <div class="transport-journey"><a class="transport-route" href="#day-2" aria-label="D8945，银川 15:55 到中卫南 17:10，飞机晚点备选"><div class="transport-point"><b class="transport-place">银川</b><time class="transport-time">15:55</time></div><div class="transport-connector"><b class="transport-code">D8945</b><small class="transport-kind">晚点备选</small></div><div class="transport-point"><time class="transport-time">17:10</time><b class="transport-place">中卫南</b></div></a><div class="transport-meta"><span>1 小时 15 分</span><span class="transport-passengers">全家（4 大 1 小）</span><span class="tag gold">备选已购</span></div><div class="transport-seats"><span class="transport-seat">詹念吉 · 04车15D</span><span class="transport-seat">王雪影 · 04车15F</span><span class="transport-seat">黄博怡 · 04车16D</span><span class="transport-seat">黄耀发 · 04车16F</span></div></div>
   </li>
@@ -420,7 +423,7 @@ html.motion-paused .postcard :is(.cloud,.star,.scene-train,.sun-rays){animation-
     </section>
 
     <section id="prepare">
-      <div class="section-head"><div><p class="section-kicker">Weather &amp; packing</p><h2>穿衣与行前准备</h2></div><p class="section-note">沙坡头附近 2021—2025 年国庆前 7 天，日最高温平均约 18.1℃、最低温平均约 9.0℃。年份差异明显，出发前 7 天再看逐日预报与预警。</p></div>
+      <div class="section-head"><div><p class="section-kicker">Weather &amp; packing</p><h2>穿衣与随身清单</h2></div><p class="section-note">沙坡头附近 2021—2025 年国庆前 7 天，日最高温平均约 18.1℃、最低温平均约 9.0℃。年份差异明显，出发前 7 天再看逐日预报与预警。</p></div>
       <div class="weather-grid">
         <article class="card info-card"><div class="index">晨</div><h3>早晨与观星</h3><p>孩子与老人：保暖打底 + 薄抓绒 + 防风外套 + 长裤。外公外婆各备轻薄羽绒背心、护膝和暖帽，不等觉得冷才加衣。</p></article>
         <article class="card info-card"><div class="index">昼</div><h3>白天玩沙</h3><p>全员长袖防晒衣、速干长裤和防滑包脚运动鞋。老人不穿底薄或鞋帮松的鞋，手杖需加大面积防陷脚垫。</p></article>
@@ -440,41 +443,28 @@ html.motion-paused .postcard :is(.cloud,.star,.scene-train,.sun-rays){animation-
         <p class="weather-source">高低温为 7 天日最高 / 最低温的平均值；数据来自 <a href="https://open-meteo.com/en/docs/historical-weather-api">Open-Meteo 历史天气 API</a>（沙坡头附近坐标，ERA5 / IFS 再分析）。</p>
       </article>
       <article class="card check">
-          <div class="check-heading"><h3>出发前，一件件准备好</h3><output id="check-count" aria-live="polite"></output></div><p class="check-note" id="check-note">9 月 30 日前整理好行李；勾选进度只保存在当前设备。</p><progress id="check-progress" value="0" max="1" aria-label="行前准备完成进度"></progress>
+          <div class="check-heading"><h3>随身物品清单</h3><output id="check-count" aria-live="polite"></output></div><p class="check-note" id="check-note">按两组分包收好，勾选进度只保存在当前设备。</p><progress id="check-progress" value="0" max="1" aria-label="随身物品准备进度"></progress>
           <div class="check-groups">
-            <section class="check-group"><h4><span>01</span>票务与预订</h4><p class="check-group-note">先处理有时效的订单与确认事项。</p><div class="check-list">
-              <label class="check-item"><input type="checkbox" data-check="prep-1"><span>将已购车票与机票（含 G1167、G9880、G1648、G2725）的订单截图发到家庭群并离线保存</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-2"><span>确认布布各段车票是否单独占席，并把儿童乘车凭证放进证件包</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-3"><span>春秋航空核对航站楼、托运行李额度和儿童随身物品规则</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-4"><span>四家酒店两间房已订；确认同楼层 / 同区域与 5 人餐食权益</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-5"><span>核对景区门票、酒店活动和接驳包含人数，预约项目不排满</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-6"><span>核对已购 D8942：10 月 5 日中卫南 14:12 → 银川 15:28，确认布布的乘车凭证</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-8"><span>核对已购 G2725：10 月 7 日南昌西 08:14 → 深圳北 11:47，确认布布的乘车凭证</span></label>
+            <section class="check-group elders"><h4><span>01</span>外公外婆</h4><p class="check-group-note">证件和常用药各自放在容易取的小包里。</p><div class="check-list">
+              <label class="check-item"><input type="checkbox" data-check="prep-elders-docs"><span>两人的身份证件、少量现金、银行卡和紧急联系人卡</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-elders-meds"><span>各自常用药按天分袋，另带 2 天余量；药名或处方照片随身存好</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-elders-health"><span>平时需要的血压计、眼镜与备用眼镜</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-elders-warm"><span>保暖打底、薄抓绒、防风外套、轻薄羽绒背心、暖帽和护膝</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-elders-shoes"><span>包脚防滑鞋、防沙鞋套与备用袜；常用手杖配防陷脚垫</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-elders-sand"><span>防风护目镜 2 副、系带帽、脖套、薄手套和备用防尘口罩</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-elders-rain"><span>轻量雨衣 2 件、手机防水袋和衣物密封袋</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-elders-daily"><span>各自的保温杯、防晒霜、润唇膏和保湿霜</span></label>
             </div></section>
-            <section class="check-group"><h4><span>02</span>证件与健康</h4><p class="check-group-note">证件随身带，药品按人分装。</p><div class="check-list">
-              <label class="check-item"><input type="checkbox" data-check="prep-docs"><span>5 人身份证件、孩子乘车凭证、银行卡与少量现金装进防水证件袋</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-9"><span>老人慢性病药按每日分袋，另带 2 天余量、处方 / 药名照片和紧急联系人卡</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-10"><span>血压计按老人平日需要携带；晕车药、止泻药等先确认与常用药无冲突</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-child-meds"><span>孩子常用药、体温计、创可贴、消毒棉片和驱蚊用品单独装袋</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-12"><span>给布布制作姓名 + 家长电话卡，放在外套内袋</span></label>
-            </div></section>
-            <section class="check-group sand"><h4><span>03</span>沙漠随身包</h4><p class="check-group-note">进入沙漠当天随身背，不放在大行李里。</p><div class="check-list">
-              <label class="check-item"><input type="checkbox" data-check="prep-11"><span>全员 SPF50+ 防晒霜、润唇膏、保湿霜和保温杯；每 2 小时补涂一次</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-sand-eye"><span>防风包边护目镜 5 副；孩子款带固定带，戴眼镜者准备可罩在外面的款式</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-sand-mask"><span>成人 KN95 / N95 备用口罩；布布准备合脸、试戴后能顺畅呼吸的儿童防护口罩</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-sand-head"><span>宽檐帽或防风帽、脖套与薄手套；帽子必须有系带，脖套不蒙住孩子口鼻</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-sand-shoes"><span>包脚防滑鞋、沙套和备用袜；鞋口收紧，老人手杖加防陷脚垫</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-sand-clean"><span>生理盐水 / 洗眼液、纸巾、湿巾、免洗洗手液和密封垃圾袋</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-sand-device"><span>手机与相机装密封防沙袋，带镜头刷；不用嘴吹镜头和接口里的细沙</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-sand-water"><span>按人分装饮水、少量电解质饮品和不易融化的小零食，孩子随时少量补水</span></label>
-            </div></section>
-            <section class="check-group rain"><h4><span>04</span>保暖与雨天</h4><p class="check-group-note">风里优先雨衣，不依赖雨伞。</p><div class="check-list">
-              <label class="check-item"><input type="checkbox" data-check="prep-pack"><span>全员按“保暖打底 + 薄抓绒 + 防风外套”分层装衣，老人另带轻薄羽绒背心</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-raincoat"><span>轻量雨衣 5 件，孩子款不拖地；大风时不撑伞</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-rain-bag"><span>背包防雨罩、电子设备防水袋和几只大号密封袋</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-rain-clothes"><span>每人至少一双备用袜，布布多备一套速干内衣裤和长裤</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-7"><span>出发前 7 天起每天查看中卫风力、降雨、扬沙预警与沙坡头项目开放情况</span></label>
-              <label class="check-item"><input type="checkbox" data-check="prep-weather-plan"><span>把室内替代地点和酒店电话离线保存；强风沙、雷雨或项目停运时立即改走雨天方案</span></label>
+            <section class="check-group family"><h4><span>02</span>爸爸妈妈布布</h4><p class="check-group-note">布布的替换衣物和沙漠小包由大人随身带。</p><div class="check-list">
+              <label class="check-item"><input type="checkbox" data-check="prep-family-docs"><span>三人的身份证件与布布乘车凭证、防水证件袋、银行卡和少量现金</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-family-meds"><span>布布常用药、体温计、创可贴、消毒棉片和成人常用药</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-family-clothes"><span>三人的保暖打底、薄抓绒、防风外套；布布多带一套速干衣裤和备用袜</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-family-sand"><span>防风护目镜 3 副、系带帽、防沙鞋套；成人备用口罩和合脸的儿童口罩</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-family-rain"><span>轻量雨衣 3 件、背包防雨罩与电子设备防水袋</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-family-food"><span>三人的饮水、布布熟悉的小零食、防晒霜、润唇膏和保湿霜</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-family-clean"><span>纸巾、湿巾、免洗洗手液、生理盐水和密封垃圾袋</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-family-devices"><span>手机、充电宝、充电线、防沙密封袋和镜头刷</span></label>
+              <label class="check-item"><input type="checkbox" data-check="prep-family-child"><span>布布的姓名与家长电话卡、随身小玩具</span></label>
             </div></section>
           </div>
       </article>
@@ -546,12 +536,12 @@ html.motion-paused .postcard :is(.cloud,.star,.scene-train,.sun-rays){animation-
    saved[input.dataset.check] = input.checked;
    try { localStorage.setItem(key, JSON.stringify(saved)); } catch (_) {
     persistent = false;
-    document.getElementById('check-note').textContent = '9 月 30 日前整理好行李；当前浏览器无法保存勾选进度，刷新后需重新勾选。';
+    document.getElementById('check-note').textContent = '当前浏览器无法保存勾选进度，刷新后需重新勾选。';
    }
    update();
   });
  });
- if (!persistent) document.getElementById('check-note').textContent = '9 月 30 日前整理好行李；当前浏览器无法保存勾选进度，刷新后需重新勾选。';
+ if (!persistent) document.getElementById('check-note').textContent = '当前浏览器无法保存勾选进度，刷新后需重新勾选。';
  update();
 
  const toggle = document.getElementById('motion-toggle');
